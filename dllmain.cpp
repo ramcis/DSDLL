@@ -32,7 +32,7 @@ uintptr_t moduleBase = (uintptr_t)GetModuleHandle("DarkSoulsIII.exe");
 void __fastcall RebirthFunc(void)
 {
     typedef void(__fastcall* pFunctionAddress)();
-    pFunctionAddress pWinFunction = (pFunctionAddress)(0x140EEC9D0); //Our new address 140EEC9D0 0xEEC9D0
+    pFunctionAddress pWinFunction = (pFunctionAddress)(0x140EEC9D0); 
     pWinFunction(); 
 }
 
@@ -46,14 +46,14 @@ void __fastcall LevelUpFunc(void)
 void __fastcall YoelMenuCall(void)
 {
     typedef void(__fastcall* pFunctionAddress)();
-    pFunctionAddress pWinFunction = (pFunctionAddress)(0x140EEC300); //Our new address 140EEC9D0 0xEEC9D0
+    pFunctionAddress pWinFunction = (pFunctionAddress)(0x140EEC300);
     pWinFunction();
 }
 
 void __fastcall AllotEstusCall(void)
 {
     typedef void(__fastcall* pFunctionAddress)();
-    pFunctionAddress pWinFunction = (pFunctionAddress)(0x140EEC360); //Our new address 140EEC9D0 0xEEC9D0
+    pFunctionAddress pWinFunction = (pFunctionAddress)(0x140EEC360);
     pWinFunction();
 }
 
@@ -99,7 +99,7 @@ void __fastcall AddSoulsCall(long baseAdr,unsigned int amount)
 void __fastcall EffectCall(long bonfire)
 {
     typedef void(__fastcall* p2FunctionAddress)(long);
-    p2FunctionAddress p2WinFunction = (p2FunctionAddress)(moduleBase + 0xAE69A0); //Our new address
+    p2FunctionAddress p2WinFunction = (p2FunctionAddress)(moduleBase + 0xAE69A0); 
     p2WinFunction(bonfire);
 }
 void __fastcall luaCallSOS(uintptr_t chrIns, int32_t sosFlag)
